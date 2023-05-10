@@ -6,7 +6,7 @@ const handleRequest = async (request: Request): Promise<Response> => {
   reflare.push({
     path: "/*",
     upstream: {
-      domain: "forefront.ai",
+      domain: "chat.forefront.ai",
       protocol: "https",
     },
   });
