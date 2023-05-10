@@ -3,12 +3,14 @@ import useReflare from "reflare";
 const handleRequest = async (request: Request): Promise<Response> => {
   const reflare = await useReflare();
 
+
   reflare.push({
     path: "/*",
     upstream: {
-      domain: "chat.forefront.ai",
+      domain: "forefront.ai",
       protocol: "https",
     },
+    subdomain: true,
   });
 
   return reflare.handle(request);
