@@ -1,7 +1,7 @@
 {
   "name": "openai-proxy",
   "version": "1.0.0",
-  "description": "🚀 openai-proxy",
+  "description": "🚀 forefont-proxy",
   "main": "dist/worker.js",
   "private": true,
   "scripts": {
