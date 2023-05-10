@@ -10,7 +10,9 @@ const handleRequest = async (request: Request): Promise<Response> => {
         domain: "www.forefront.ai",
         protocol: "https",
       }
-    },
+    }
+  );
+  reflare.push(
     {
       path: "/chat/*",
       upstream: {
@@ -18,20 +20,24 @@ const handleRequest = async (request: Request): Promise<Response> => {
         protocol: "https",
       }
     },
+  );
+  reflare.push(
     {
       path: "/accounts/*",
       upstream: {
         domain: "accounts.forefront.ai",
         protocol: "https",
       }
-    },
+    }
+  );
+  reflare.push(
     {
       path: "/clerk/*",
       upstream: {
         domain: "clerk.forefront.ai",
         protocol: "https",
       }
-    },
+    }
   );
 
   return reflare.handle(request);
